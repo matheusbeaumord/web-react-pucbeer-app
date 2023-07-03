@@ -1,6 +1,6 @@
 const { instance } = require('./apiInstance');
 
-const getOrdersFromId = async (token) => {
+export const getOrdersFromId = async (token) => {
   console.log(token);
   try {
     const result = await instance.get('orders', {
@@ -15,7 +15,7 @@ const getOrdersFromId = async (token) => {
   }
 };
 
-const getAllOrders = async (token) => {
+export const getAllOrders = async (token) => {
   try {
     const result = await instance.get('sale', {
       headers: {
@@ -29,17 +29,11 @@ const getAllOrders = async (token) => {
   }
 };
 
-const updateOrderStatus = async (id) => {
+export const updateOrderStatus = async (id) => {
   try {
     await instance.put(`admin/orders/${id}`);
   } catch (error) {
     console.log(error);
     return { error: 'Erro' };
   }
-};
-
-module.exports = {
-  getOrdersFromId,
-  getAllOrders,
-  updateOrderStatus,
 };
