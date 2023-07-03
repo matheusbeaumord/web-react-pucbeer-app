@@ -40,7 +40,7 @@ const AdminDetailOrder = () => {
   return (
     <div>
       <h1 data-testid="top-title">Detalhes de Pedido</h1>
-      {!loading ? (
+      {!loading && (
         <div>
           <h2 data-testid="order-number">{`Pedido  ${id}`}</h2>
           <span data-testid="order-status">{`${!delivered ? status : 'Entregue'}`}</span>
@@ -75,8 +75,6 @@ const AdminDetailOrder = () => {
             </button>
           </div>
         </div>
-      ) : (
-        'deu merda'
       )}
     </div>
   );

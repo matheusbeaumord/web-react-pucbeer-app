@@ -34,7 +34,7 @@ const ClientDetailOrder = () => {
   return (
     <div>
       <h1 data-testid="top-title">Detalhes de Pedido</h1>
-      {!loading ? (
+      {!loading && (
         <div>
           <h2 data-testid="order-number">{`Pedido  ${id} - ${status}`}</h2>
           <h3 data-testid="order-date">{dateFormat(saleDate, 'dd/mm')}</h3>
@@ -54,8 +54,6 @@ const ClientDetailOrder = () => {
           ))}
           <h3 data-testid="order-total-value">{`Total: R$ ${accPrice(totalPrice)}`}</h3>
         </div>
-      ) : (
-        'deu merda'
       )}
     </div>
   );
