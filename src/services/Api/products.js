@@ -1,6 +1,6 @@
 const { instance } = require('./apiInstance');
 
-const getAllProducts = async () => {
+export const getAllProducts = async () => {
   try {
     const result = await instance.get('products');
     return result.data;
@@ -9,7 +9,7 @@ const getAllProducts = async () => {
   }
 };
 
-const sendProducts = async (body, token) => {
+export const sendProducts = async (body, token) => {
   try {
     const result = await instance.post('sale', body, {
       headers: {
@@ -20,9 +20,4 @@ const sendProducts = async (body, token) => {
   } catch (error) {
     return { error: 'não há produtos' };
   }
-};
-
-module.exports = {
-  getAllProducts,
-  sendProducts,
 };

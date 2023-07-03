@@ -1,7 +1,7 @@
 const API_URL = 'https://pucbeer-api.onrender.com';
 const axios = require('axios');
 
-const instance = axios.create({
+export const instance = axios.create({
   baseURL: API_URL,
 });
 
