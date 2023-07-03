@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect } from 'react-router';
-import { BeerContext } from '../context/BeerContext';
+import { BeerContext } from '../../context/BeerContext';
 
 const ProductCard = (props) => {
   const { data } = props;
@@ -18,7 +18,6 @@ const ProductCard = (props) => {
   const accPrice = price.replace('.', ',');
 
   useEffect(() => {
-    console.log('effect');
     const pushCart = { ...cart, [id]: { product, quantity } };
     localStorage.setItem('cart', JSON.stringify(pushCart));
     setCart(pushCart);

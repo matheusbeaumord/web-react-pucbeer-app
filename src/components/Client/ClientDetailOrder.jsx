@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import dateFormat from 'dateformat';
 import { Redirect, useHistory } from 'react-router';
-import { getDetailOrders } from '../services/Api/user';
+import { getDetailOrders } from '../../services/Api/user';
 
 const ClientDetailOrder = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +12,6 @@ const ClientDetailOrder = () => {
   const history = useHistory();
   const path = history.location.pathname;
   const idPathName = path.split('/')[2];
-  console.log('parametro', saleInfo);
 
   const accPrice = (value) => parseFloat(value).toFixed(2).toString().replace('.', ',');
 

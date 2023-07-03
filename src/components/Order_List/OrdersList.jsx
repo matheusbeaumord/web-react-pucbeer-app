@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router';
-import { getOrdersFromId } from '../services/Api/orders';
+import { getOrdersFromId } from '../../services/Api/orders';
 import OrderCard from './OrderCard';
 
 const OrdersList = () => {

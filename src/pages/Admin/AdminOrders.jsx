@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderAdmin from '../../components/HeaderAdmin';
-import AdminOrdersList from '../../components/AdminOrdersList';
+import HeaderAdmin from '../../components/Header/HeaderAdmin';
+import AdminOrdersList from '../../components/Admin/AdminOrdersList';
 
 const AdminOrders = () => (
   <div>

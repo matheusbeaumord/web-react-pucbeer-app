@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderAdmin from '../../components/HeaderAdmin';
-import ClientDetailOrder from '../../components/ClientDetailOrder';
+import HeaderAdmin from '../../components/Header/HeaderAdmin';
+import ClientDetailOrder from '../../components/Client/ClientDetailOrder';
 
 const OrdersDetail = () => (
   <div>

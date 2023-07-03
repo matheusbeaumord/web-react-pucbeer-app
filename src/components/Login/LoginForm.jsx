@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Validator from 'email-validator';
 import { Link, useHistory } from 'react-router-dom';
-import LoginAuth from '../services/Auth/Login';
+import LoginAuth from '../../services/Auth/Login';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');

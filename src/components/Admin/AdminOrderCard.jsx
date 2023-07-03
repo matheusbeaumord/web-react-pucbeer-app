@@ -11,7 +11,6 @@ const AdminOrderCard = (props) => {
   const accPrice = parseFloat(price).toFixed(2).toString().replace('.', ',');
 
   if (redirect) return <Redirect to={ `/admin/orders/${id}` } />;
-  console.log(data);
 
   return (
     <div

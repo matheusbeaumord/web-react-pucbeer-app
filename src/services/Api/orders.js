@@ -1,7 +1,6 @@
 const { instance } = require('./apiInstance');
 
 export const getOrdersFromId = async (token) => {
-  console.log(token);
   try {
     const result = await instance.get('orders', {
       headers: {

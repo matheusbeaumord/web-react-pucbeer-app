@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import dateFormat from 'dateformat';
 import { Redirect, useHistory } from 'react-router';
-import { getDetailOrders } from '../services/Api/user';
-import { updateOrderStatus } from '../services/Api/orders';
+import { getDetailOrders } from '../../services/Api/user';
+import { updateOrderStatus } from '../../services/Api/orders';
 
 const AdminDetailOrder = () => {
   const [products, setProducts] = useState([]);
@@ -14,7 +14,6 @@ const AdminDetailOrder = () => {
   const history = useHistory();
   const path = history.location.pathname;
   const idPathName = path.split('/')[3];
-  console.log('parametro', saleInfo);
 
   const accPrice = (value) => parseFloat(value).toFixed(2).toString().replace('.', ',');
 

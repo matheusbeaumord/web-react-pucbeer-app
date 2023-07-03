@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderAdmin from '../../components/HeaderAdmin';
-import AdminProfileForm from '../../components/AdminProfileForm';
+import HeaderAdmin from '../../components/Header/HeaderAdmin';
+import AdminProfileForm from '../../components/Admin/AdminProfileForm';
 
 const AdminProfile = () => (
   <div>

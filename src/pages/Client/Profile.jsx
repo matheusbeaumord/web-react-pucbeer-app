@@ -1,5 +1,5 @@
 import React from 'react';
-import ClientProfileForm from '../../components/ClientProfileForm';
+import ClientProfileForm from '../../components/Client/ClientProfileForm';
 
 function ClientProfile() {
   return (

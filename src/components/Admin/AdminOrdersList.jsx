@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Redirect } from 'react-router';
-import { getAllOrders } from '../services/Api/orders';
+import { getAllOrders } from '../../services/Api/orders';
 import AdminOrderCard from './AdminOrderCard';
 
 const AdminOrdersList = () => {
@@ -9,7 +9,7 @@ const AdminOrdersList = () => {
   useEffect(() => {
     getAllOrders(
       JSON.parse(localStorage.getItem('token')),
-    ).then((r) => { setOrders(r); console.log(r); });
+    ).then((r) => { setOrders(r) });
   }, []);
   if (!localStorage.getItem('token')) {
     return (<Redirect to="/login" />);

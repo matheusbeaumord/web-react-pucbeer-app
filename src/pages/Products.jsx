@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
-import Header from '../components/Header';
-import HeaderAdmin from '../components/HeaderAdmin';
-import ProductsList from '../components/ProductsList';
+import Header from '../components/Header/Header';
+import HeaderAdmin from '../components/Header/HeaderAdmin';
+import ProductsList from '../components/Order_List/ProductsList';
 import { BeerContext } from '../context/BeerContext';
 
 const Products = () => {
@@ -11,7 +11,6 @@ const Products = () => {
 
   const [localCart, setLocalCart] = useState(() => {
     const localValue = JSON.parse(localStorage.getItem('cart'));
-    console.log(localValue);
     if (!localValue === undefined || !localValue === null) {
       return localValue;
     }

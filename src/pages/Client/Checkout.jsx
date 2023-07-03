@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Redirect, useHistory } from 'react-router';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
 import { BeerContext } from '../../context/BeerContext';
 import { sendProducts } from '../../services/Api/products';
 

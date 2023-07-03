@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { updateUserName } from '../services/Api/user';
+import { updateUserName } from '../../services/Api/user';
 
 const ClientProfileForm = () => {
   const email = JSON.parse(localStorage.getItem('email'));
