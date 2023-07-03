@@ -37,18 +37,6 @@
     "lint": "eslint --no-inline-config --ext .js,.jsx --no-error-on-unmatched-pattern -c .eslintrc.json .",
     "lint:styles": "npx stylelint '**/*.css'"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "jest": {
     "coveragePathIgnorePatterns": [
       "index.js",
@@ -56,12 +44,6 @@
       "./services/renderWithRouter",
       "./services/history",
       "Apptest.js"
-    ],
-    "coverageReporters": [
-      "json",
-      "lcovonly",
-      "text",
-      "clover"
     ]
   }
 }
