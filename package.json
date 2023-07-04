@@ -3,13 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.13.7",
-    "@mui/material": "^5.13.7",
-    "@testing-library/jest-dom": "4.2.4",
-    "@testing-library/react": "9.5.0",
-    "@testing-library/user-event": "7.2.1",
     "axios": "0.19.2",
     "dateformat": "^4.5.1",
     "dotenv": "^16.3.1",
@@ -20,18 +14,13 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hamburger-menu": "^1.2.1",
+    "react-jsx-runtime": "^1.0.0-alpha.1",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
     "dotenv-webpack": "^8.0.1",
     "eslint": "6.8.0",
-    "eslint-config-airbnb": "18.2.0",
-    "eslint-config-airbnb-base": "14.2.0",
-    "eslint-plugin-import": "2.22.0",
-    "eslint-plugin-jsx-a11y": "6.3.0",
-    "eslint-plugin-react": "7.20.0",
-    "eslint-plugin-react-hooks": "2.3.0",
     "mocha": "7.0.1"
   },
   "scripts": {
