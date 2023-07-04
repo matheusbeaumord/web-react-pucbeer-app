@@ -3,7 +3,7 @@ import Hamburger from 'hamburger-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const [sideBar, setSideBar] = useState(true);
+  const [sideBar, setSideBar] = useState(false);
 
   const logout = () => {
     localStorage.clear();
