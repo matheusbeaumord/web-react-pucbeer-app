@@ -21,3 +21,16 @@ export const sendProducts = async (body, token) => {
     return { error: 'não há produtos' };
   }
 };
+
+export const addProduct = async (productData) => {
+  console.log(
+    '🚀 ~ file: products.js:26 ~ addProduct ~ productData:',
+    productData
+  );
+  try {
+    const response = await instance.post('/products', productData);
+    return response.data;
+  } catch (error) {
+    throw new Error('Erro ao adicionar produto');
+  }
+};
