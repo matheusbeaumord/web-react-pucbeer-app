@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { addProduct, editProduct } from '../../services/Api/products'
 import { getAllProducts } from '../../services/Api/products';
+import './admin.css'
+
 
 
 const AdminProductForm = ({products}) => {
@@ -11,7 +13,6 @@ const AdminProductForm = ({products}) => {
 
   const handleEditProduct = async (productId, product) => {
     await editProduct(productId, product);
-
   };
 
   const [editSelected, setEditSelected] = useState(false);
@@ -44,10 +45,9 @@ const AdminProductForm = ({products}) => {
     setProductId(null);
   };
   
-
   return (
     <form onSubmit={handleSubmit}>
-    <label htmlFor="editCheckbox">
+    <label htmlFor="editCheckbox" className='label-entrar'>
       Editar:
       <input
         type="checkbox"
@@ -57,28 +57,31 @@ const AdminProductForm = ({products}) => {
       />
     </label>
 
-    <label htmlFor="name">Nome:</label>
-    {editSelected ? (
-      <select
-      id="name"
-      value={productId}
-      onChange={(e) => setProductId(e.target.value)}
-    >
-      <option value="">Selecione um produto</option>
-      {products.map((product) => (
-        <option key={product.id} value={product.id}>
-          {product.name}
-        </option>
-      ))}
-    </select>
-    ) : (
-      <input
-        type="text"
-        id="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+    {editSelected && (
+      <>
+        <label htmlFor="name">Produto:</label>
+          <select
+          id="name"
+          value={productId}
+          onChange={(e) => setProductId(e.target.value)}
+          >
+          <option value="">Selecione um produto</option>
+          {products.map((product) => (
+            <option key={product.id} value={product.id}>
+              {product.name}
+            </option>
+          ))}
+        </select>
+      </>
     )}
+
+    <label htmlFor="name">Nome:</label>
+    <input
+      type="text"
+      id="name"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+    />
 
     <label htmlFor="price">Preço:</label>
     <input
