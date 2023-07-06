@@ -23,14 +23,19 @@ export const sendProducts = async (body, token) => {
 };
 
 export const addProduct = async (productData) => {
-  console.log(
-    '🚀 ~ file: products.js:26 ~ addProduct ~ productData:',
-    productData
-  );
   try {
     const response = await instance.post('/products', productData);
     return response.data;
   } catch (error) {
     throw new Error('Erro ao adicionar produto');
+  }
+};
+
+export const editProduct = async (productId, productData) => {
+  try {
+    const response = await instance.put(`/products/${productId}`, productData);
+    return response.data;
+  } catch (error) {
+    throw new Error('Erro ao editar produto');
   }
 };
