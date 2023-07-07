@@ -13,6 +13,7 @@ import Checkout from './pages/Client/Checkout';
 import AdminProfile from './pages/Admin/Profile';
 import AdminOrders from './pages/Admin/AdminOrders';
 import AdminDetailOrder from './pages/Admin/OrdersDetail';
+import AdminProducts from './pages/Admin/AdminProducts';
 import dotenv from 'dotenv';
 dotenv.config();
 
@@ -22,6 +23,7 @@ const App = () => (
     <Route exact path='/login' component={Login} />
     <Route exact path='/register' component={Register} />
     <Route exact path='/admin/orders' component={AdminOrders} />
+    <Route exact path='/admin/produtos' component={AdminProducts} />
     <Route exact path='/admin/profile' component={AdminProfile} />
     <Route exact path='/products' component={Products} />
     <Route exact path='/orders' component={Orders} />

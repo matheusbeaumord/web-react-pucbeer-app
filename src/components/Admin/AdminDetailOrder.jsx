@@ -3,6 +3,7 @@ import dateFormat from 'dateformat';
 import { Redirect, useHistory } from 'react-router';
 import { getDetailOrders } from '../../services/Api/user';
 import { updateOrderStatus } from '../../services/Api/orders';
+import './admin.css'
 
 const AdminDetailOrder = () => {
   const [products, setProducts] = useState([]);
