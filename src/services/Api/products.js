@@ -39,3 +39,13 @@ export const editProduct = async (productId, productData) => {
     throw new Error('Erro ao editar produto');
   }
 };
+
+export const deleteProduct = async (productId) => {
+  try {
+    const response = await instance.delete(`/products/${productId}`);
+    return response.data;
+  } catch (error) {
+    console.log('🚀 ~ file: products.js:48 ~ deleteProduct ~ error:', error);
+    throw new Error('Erro ao excluir produto');
+  }
+};
